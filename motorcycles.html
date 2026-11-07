@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.motorcycles.t">Motorcycles — PAKSTAR SARL</title>
+<meta name="description" data-i18n-content="meta.motorcycles.d" content="Browse the PAKSTAR SARL motorcycle catalogue by category and open a quick view of each model.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('pakstar.seen')){document.documentElement.classList.add('no-loader')}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="motorcycles">
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__inner"><img class="loader__logo" src="assets/img/logo.png" alt="" width="800" height="467"><div class="loader__sub">SARL · DJIBOUTI</div><div class="loader__bar"><i id="loaderBar"></i></div><div class="loader__pct" id="loaderPct">0</div></div></div>
+
+<main id="main">
+<section class="page-hero page-hero--photo">
+  <div class="page-hero__bg page-hero__bg--photo" style="background-image:url(assets/img/hero-touring.jpg)" aria-hidden="true"></div>
+  <div class="container-xl">
+    <ol class="crumbs reveal" aria-label="Breadcrumb"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li aria-current="page"><span data-i18n="nav.motorcycles">Motorcycles</span></li></ol>
+    <span class="eyebrow reveal" data-d="80" data-i18n="moto.eyebrow">Catalogue</span>
+    <h1 class="reveal" data-d="140" data-i18n="moto.h1">Motorcycles</h1>
+    <p class="lead-px reveal" data-d="220" data-i18n="moto.lead">Five models across four categories. Open any model for full specifications and the price.</p>
+    
+  </div>
+</section>
+<section class="section" aria-labelledby="catalogTitle">
+  <div class="container-xl">
+    <h2 class="sr-only" id="catalogTitle" data-i18n="moto.catalog">Motorcycle catalogue</h2>
+    <div class="filters">
+      <div class="filters__chips" id="filterChips" role="group" data-i18n-aria="moto.filter" aria-label="Filter by category"></div>
+      <div class="filters__side">
+        <span class="count" id="count" role="status" aria-live="polite"></span>
+        <label class="sr-only" for="sort" data-i18n="c.sort">Sort</label>
+        <select class="sel" id="sort"><option value="default"></option><option value="name"></option><option value="cat"></option><option value="price"></option><option value="priceDesc"></option></select>
+        <button type="button" class="px-btn px-btn--sm px-btn--ghost" id="reset" hidden><span data-i18n="c.reset">Reset filters</span></button>
+      </div>
+    </div>
+    <div class="p-grid" id="catalog"></div>
+    <p class="demo-note" data-i18n="c.sample.note">Specifications and prices are indicative and may change. Please confirm with PAKSTAR SARL before buying.</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="compare-section" aria-labelledby="cmpTitle">
+  <div class="container-xl">
+    <div class="sec-head"><span class="eyebrow reveal" data-i18n="cmp.eyebrow">Compare</span><h2 class="reveal" data-d="80" id="cmpTitle" data-i18n="cmp.h2">Compare models</h2><p class="reveal" data-d="140" data-i18n="cmp.p">All five models side by side. The best figure in each row is highlighted.</p></div>
+    <div class="cmp-wrap reveal" id="compare" tabindex="0" role="region" data-i18n-aria="cmp.h2" aria-label="Compare models"></div>
+    <p class="demo-note" data-i18n="cmp.note">Highlighted: highest power and fuel tank, lowest weight and price. Figures are indicative.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="guideTitle">
+  <div class="container-xl">
+    <div class="sec-head"><span class="eyebrow reveal" data-i18n="guide.eyebrow">Buying guide</span><h2 class="reveal" data-d="80" id="guideTitle" data-i18n="guide.h2">Which motorcycle suits you?</h2></div>
+    <div class="f-grid" data-stagger>
+      <article class="f-card reveal"><div class="f-card__ico" data-icon="route"></div><h3 data-i18n="guide.1.t">Daily commuting</h3><p data-i18n="guide.1.d">PS Electric 200 or PS Classic 150 — light, economical and easy in traffic.</p></article>
+      <article class="f-card reveal"><div class="f-card__ico" data-icon="gauge"></div><h3 data-i18n="guide.2.t">Long distance & rough roads</h3><p data-i18n="guide.2.d">PS Trail 200 — ground clearance, range and comfort for the long haul.</p></article>
+      <article class="f-card reveal"><div class="f-card__ico" data-icon="star"></div><h3 data-i18n="guide.3.t">Relaxed cruising</h3><p data-i18n="guide.3.d">PS Highway 250 — low seat and smooth twin-cylinder power. Prefer sportier? See PS Sprint 250.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="banner"><div class="banner__bg" data-parallax="0.15"></div><div class="container-xl"><h2 class="reveal" data-i18n="moto.cta.h2">Found your motorcycle?</h2><p class="reveal" data-d="80" data-i18n="moto.cta.p">Send an inquiry and we will follow up with availability and next steps.</p><a class="px-btn reveal" data-d="140" href="inquiry.html"><span data-i18n="nav.inquire">Inquire</span><i data-icon="arrow"></i></a></div></section>
+</main>
+
+<script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/lang-data.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/products.js" defer></script>
+<script src="js/modals.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/pages.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

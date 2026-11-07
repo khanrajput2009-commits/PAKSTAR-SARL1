@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.inquiry.t">Product Inquiry — PAKSTAR SARL</title>
+<meta name="description" data-i18n-content="meta.inquiry.d" content="Request information about a PAKSTAR SARL motorcycle.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('pakstar.seen')){document.documentElement.classList.add('no-loader')}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="inquiry">
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__inner"><img class="loader__logo" src="assets/img/logo.png" alt="" width="800" height="467"><div class="loader__sub">SARL · DJIBOUTI</div><div class="loader__bar"><i id="loaderBar"></i></div><div class="loader__pct" id="loaderPct">0</div></div></div>
+
+<main id="main">
+<section class="page-hero page-hero--photo">
+  <div class="page-hero__bg page-hero__bg--photo" style="background-image:url(assets/img/hero-adventure.jpg)" aria-hidden="true"></div>
+  <div class="container-xl">
+    <ol class="crumbs reveal" aria-label="Breadcrumb"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li aria-current="page"><span data-i18n="nav.inquire">Inquire</span></li></ol>
+    <span class="eyebrow reveal" data-d="80" data-i18n="inq.eyebrow">Inquiry</span>
+    <h1 class="reveal" data-d="140" data-i18n="inq.h1">Product inquiry</h1>
+    <p class="lead-px reveal" data-d="220" data-i18n="inq.lead">Ask about a specific motorcycle or the range in general.</p>
+    
+  </div>
+</section>
+<section class="section"><div class="container-xl"><div class="row g-5">
+  <div class="col-lg-7"><div class="form-card reveal">
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)" data-i18n="inq.form.h2">Your inquiry</h2>
+    <p data-i18n="f.reqnote">Fields marked * are required.</p>
+    <form id="inquiryForm" data-form data-draft="inquiry" novalidate>
+      <div class="alert-px" data-status aria-live="polite"></div>
+      <div class="selected-model" id="selectedModel" aria-live="polite"></div>
+      <div class="field"><label for="model"><span data-i18n="inq.model">Motorcycle</span></label><select class="inp" id="model" name="model" data-draft-field></select></div>
+      <div class="field"><label for="name"><span data-i18n="f.name">Full name</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="name" name="name" type="text" autocomplete="name" required data-i18n-ph="f.name.ph" placeholder="Your name"></div>
+      <div class="row g-3"><div class="col-md-6"><div class="field"><label for="email"><span data-i18n="f.email">Email address</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="email" name="email" type="email" autocomplete="email" required data-i18n-ph="f.email.ph" placeholder="name@example.com"></div></div><div class="col-md-6"><div class="field"><label for="phone"><span data-i18n="f.phone">Phone number</span> <span class="hint-inline" data-i18n="f.optional" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--dim)">(optional)</span></label><input class="inp" id="phone" name="phone" type="tel" autocomplete="tel" data-i18n-ph="f.phone.ph" placeholder="+000 00 00 00 00"></div></div></div>
+      <div class="field"><label for="country"><span data-i18n="f.country">Country or region</span> <span class="req" aria-hidden="true">*</span></label><select class="inp" id="country" name="country" required data-draft-field autocomplete="country-name"><option value="" data-i18n="f.choose">Select…</option><option value="Djibouti" data-i18n="ctry.dj">Djibouti</option><option value="Ethiopia" data-i18n="ctry.et">Ethiopia</option><option value="Somalia" data-i18n="ctry.so">Somalia</option><option value="Eritrea" data-i18n="ctry.er">Eritrea</option><option value="Other" data-i18n="ctry.other">Other</option></select></div>
+      <div class="field"><label id="pcm-l" data-i18n="f.pcm">Preferred contact method</label><div class="radios" role="radiogroup" aria-labelledby="pcm-l">
+        <label class="radio"><input type="radio" name="method" value="email" checked data-draft-field><span data-i18n="f.pcm.email">Email</span></label>
+        <label class="radio"><input type="radio" name="method" value="phone" data-draft-field><span data-i18n="f.pcm.phone">Phone</span></label></div></div>
+      <div class="field"><label for="message"><span data-i18n="f.message">Message</span> <span class="req" aria-hidden="true">*</span></label><textarea class="inp" id="message" name="message" rows="5" required data-i18n-ph="inq.message.ph" minlength="10" placeholder="What would you like to know?"></textarea></div>
+      <div class="field"><div class="consent"><input type="checkbox" id="consent" name="consent" required><label for="consent" data-i18n="f.consent">I agree that my details may be used to respond to this request.</label></div></div>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center"><button class="px-btn" type="submit"><span data-i18n="f.send">Send inquiry</span><span class="spin" aria-hidden="true"></span></button><button type="button" class="px-btn px-btn--ghost px-btn--sm" data-clear-draft><span data-i18n="inq.clear">Clear saved choices</span></button></div>
+      <p class="demo-note" data-i18n="f.demo.note">Demonstration form: unless a form service is connected, nothing is sent to PAKSTAR SARL.</p>
+      <p class="demo-note" data-i18n="inq.draft.note">Your model, country and contact-method choices are remembered on this device only. Your name, email, phone and message are never stored.</p>
+    </form>
+  </div></div>
+  <div class="col-lg-5">
+    <div class="f-card reveal" data-d="120"><div class="f-card__ico" data-icon="info"></div><h3 data-i18n="inq.side.h3">Before you send</h3><p data-i18n="inq.side.p">Only the details needed to answer you are requested. Delivery to PAKSTAR SARL requires a connected email service or backend — see the demo notice on the form.</p></div>
+    <ul class="c-list" style="margin-top:1.2rem" data-stagger>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="phone"></div><div><h4 data-i18n="contact.phone">Phone</h4><p><span class="ph" data-i18n="ph.phone">[Official Contact Number]</span></p></div></li>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="mail"></div><div><h4 data-i18n="contact.email">Email</h4><p><span class="ph" data-i18n="ph.email">[Official Business Email]</span></p></div></li>
+    </ul>
+  </div>
+</div></div></section>
+</main>
+
+<script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/lang-data.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/products.js" defer></script>
+<script src="js/modals.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/pages.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

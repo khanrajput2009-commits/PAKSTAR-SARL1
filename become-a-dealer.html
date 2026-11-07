@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.dealer.t">Become a Dealer — PAKSTAR SARL</title>
+<meta name="description" data-i18n-content="meta.dealer.d" content="Enquire about becoming a PAKSTAR SARL dealer or distributor.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('pakstar.seen')){document.documentElement.classList.add('no-loader')}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="dealers">
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__inner"><img class="loader__logo" src="assets/img/logo.png" alt="" width="800" height="467"><div class="loader__sub">SARL · DJIBOUTI</div><div class="loader__bar"><i id="loaderBar"></i></div><div class="loader__pct" id="loaderPct">0</div></div></div>
+
+<main id="main">
+<section class="page-hero page-hero--bike">
+  <div class="page-hero__bg page-hero__bg--bike" style="background-image:url(assets/img/bike-highway-250.jpg)" aria-hidden="true"></div>
+  <div class="container-xl">
+    <ol class="crumbs reveal" aria-label="Breadcrumb"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li><a href="dealers.html" data-i18n="nav.dealers">Dealer Network</a></li><li aria-current="page"><span data-i18n="nav.dealer">Become a Dealer</span></li></ol>
+    <span class="eyebrow reveal" data-d="80" data-i18n="bd.eyebrow">Partnership</span>
+    <h1 class="reveal" data-d="140" data-i18n="bd.h1">Become a dealer</h1>
+    <p class="lead-px reveal" data-d="220" data-i18n="bd.lead">Tell us about your business and the partnership you have in mind.</p>
+    
+  </div>
+</section>
+<section class="section"><div class="container-xl"><div class="row g-5">
+  <div class="col-lg-7"><div class="form-card reveal">
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)" data-i18n="bd.form.h2">Business inquiry</h2>
+    <p data-i18n="f.reqnote">Fields marked * are required.</p>
+    <form id="dealerForm" data-form novalidate>
+      <div class="alert-px" data-status aria-live="polite"></div>
+      <div class="field"><label for="company"><span data-i18n="bd.company">Company name</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="company" name="company" type="text" autocomplete="organization" required data-i18n-ph="bd.company.ph" placeholder="Your company"></div>
+      <div class="field"><label for="name"><span data-i18n="bd.contact">Contact person</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="name" name="name" type="text" autocomplete="name" required data-i18n-ph="f.name.ph" placeholder="Your name"></div>
+      <div class="row g-3"><div class="col-md-6"><div class="field"><label for="email"><span data-i18n="bd.email">Business email</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="email" name="email" type="email" autocomplete="email" required data-i18n-ph="f.email.ph" placeholder="name@example.com"></div></div><div class="col-md-6"><div class="field"><label for="phone"><span data-i18n="bd.phone">Contact number</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="phone" name="phone" type="tel" autocomplete="tel" required data-i18n-ph="f.phone.ph" placeholder="+000 00 00 00 00"></div></div></div>
+      <div class="row g-3"><div class="col-md-6"><div class="field"><label for="country"><span data-i18n="f.country">Country or region</span> <span class="req" aria-hidden="true">*</span></label><select class="inp" id="country" name="country" required autocomplete="country-name"><option value="" data-i18n="f.choose">Select…</option><option value="Djibouti" data-i18n="ctry.dj">Djibouti</option><option value="Ethiopia" data-i18n="ctry.et">Ethiopia</option><option value="Somalia" data-i18n="ctry.so">Somalia</option><option value="Eritrea" data-i18n="ctry.er">Eritrea</option><option value="Other" data-i18n="ctry.other">Other</option></select></div></div><div class="col-md-6"><div class="field"><label for="btype"><span data-i18n="bd.type">Business type</span> <span class="req" aria-hidden="true">*</span></label><select class="inp" id="btype" name="btype" required><option value="" data-i18n="f.choose">Select…</option><option value="retail" data-i18n="bd.type.retail">Motorcycle retail</option><option value="workshop" data-i18n="bd.type.workshop">Workshop / service</option><option value="distribution" data-i18n="bd.type.dist">Distribution</option><option value="other" data-i18n="topic.other">Other</option></select></div></div></div>
+      <div class="field"><label for="message"><span data-i18n="bd.proposal">Proposed partnership</span> <span class="req" aria-hidden="true">*</span></label><textarea class="inp" id="message" name="message" rows="5" required data-i18n-ph="bd.proposal.ph" minlength="20" placeholder="Briefly describe your business and what you would like to do together."></textarea><span class="hint" id="message-hint" data-i18n="bd.proposal.hint">A few sentences are enough.</span></div>
+      <div class="field"><div class="consent"><input type="checkbox" id="consent" name="consent" required><label for="consent" data-i18n="f.consent">I agree that my details may be used to respond to this request.</label></div></div>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center"><button class="px-btn" type="submit"><span data-i18n="bd.send">Send business inquiry</span><span class="spin" aria-hidden="true"></span></button></div>
+      <p class="demo-note" data-i18n="f.demo.note">Demonstration form: unless a form service is connected, nothing is sent to PAKSTAR SARL.</p>
+    </form>
+  </div></div>
+  <div class="col-lg-5">
+    <div class="f-card reveal" data-d="120"><div class="f-card__ico" data-icon="info"></div><h3 data-i18n="bd.side.h3">Please note</h3><p data-i18n="bd.side.p">An inquiry does not guarantee approval, and this site does not claim that a formal dealer programme already exists.</p></div>
+    <div class="steps" style="grid-template-columns:1fr;margin-top:1.2rem" data-stagger>
+      <div class="step reveal"><h3 data-i18n="bd.step.1.t">Send your inquiry</h3><p data-i18n="bd.step.1.d">Share your business details and ideas.</p></div>
+      <div class="step reveal"><h3 data-i18n="bd.step.2.t">We review</h3><p data-i18n="bd.step.2.d">The team considers your proposal.</p></div>
+      <div class="step reveal"><h3 data-i18n="bd.step.3.t">We respond</h3><p data-i18n="bd.step.3.d">You hear back using your chosen contact details.</p></div>
+    </div>
+  </div>
+</div></div></section>
+</main>
+
+<script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/lang-data.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/products.js" defer></script>
+<script src="js/modals.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/pages.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

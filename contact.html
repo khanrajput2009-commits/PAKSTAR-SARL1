@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.contact.t">Contact — PAKSTAR SARL</title>
+<meta name="description" data-i18n-content="meta.contact.d" content="Contact PAKSTAR SARL.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('pakstar.seen')){document.documentElement.classList.add('no-loader')}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__inner"><img class="loader__logo" src="assets/img/logo.png" alt="" width="800" height="467"><div class="loader__sub">SARL · DJIBOUTI</div><div class="loader__bar"><i id="loaderBar"></i></div><div class="loader__pct" id="loaderPct">0</div></div></div>
+
+<main id="main">
+<section class="page-hero page-hero--photo">
+  <div class="page-hero__bg page-hero__bg--photo" style="background-image:url(assets/img/hero-showroom.jpg)" aria-hidden="true"></div>
+  <div class="container-xl">
+    <ol class="crumbs reveal" aria-label="Breadcrumb"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li aria-current="page"><span data-i18n="nav.contact">Contact</span></li></ol>
+    <span class="eyebrow reveal" data-d="80" data-i18n="contact.eyebrow">Contact</span>
+    <h1 class="reveal" data-d="140" data-i18n="contact.h1">Contact us</h1>
+    <p class="lead-px reveal" data-d="220" data-i18n="contact.lead">Send a message and tell us how we can help.</p>
+    
+  </div>
+</section>
+<section class="section"><div class="container-xl"><div class="row g-5">
+  <div class="col-lg-5">
+    <h2 class="reveal" style="font-size:clamp(1.8rem,3vw,2.4rem)" data-i18n="contact.info.h2">Contact details</h2>
+    <ul class="c-list" data-stagger>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="pin"></div><div><h4 data-i18n="contact.addr">Address</h4><p><span class="ph" data-i18n="ph.address">[Official Company Address]</span></p></div></li>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="phone"></div><div><h4 data-i18n="contact.phone">Phone</h4><p><span class="ph" data-i18n="ph.phone">[Official Contact Number]</span></p></div></li>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="mail"></div><div><h4 data-i18n="contact.email">Email</h4><p><span class="ph" data-i18n="ph.email">[Official Business Email]</span></p></div></li>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="cal"></div><div><h4 data-i18n="contact.hours">Opening hours</h4><p><span class="ph" data-i18n="ph.hours">[Opening hours]</span></p></div></li>
+      <li class="c-item reveal"><div class="f-card__ico" data-icon="globe"></div><div><h4 data-i18n="contact.region">Region</h4><p data-i18n="contact.region.d">Djibouti</p></div></li>
+    </ul>
+    <p class="demo-note" data-i18n="contact.ph.note">Placeholders will be replaced with official details once supplied.</p>
+  </div>
+  <div class="col-lg-7"><div class="form-card reveal" data-d="120">
+    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)" data-i18n="contact.form.h2">Send a message</h2>
+    <p data-i18n="f.reqnote">Fields marked * are required.</p>
+    <form id="contactForm" data-form novalidate>
+      <div class="alert-px" data-status aria-live="polite"></div>
+      <div class="field"><label for="name"><span data-i18n="f.name">Full name</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="name" name="name" type="text" autocomplete="name" required data-i18n-ph="f.name.ph" placeholder="Your name"></div>
+      <div class="row g-3"><div class="col-md-6"><div class="field"><label for="email"><span data-i18n="f.email">Email address</span> <span class="req" aria-hidden="true">*</span></label><input class="inp" id="email" name="email" type="email" autocomplete="email" required data-i18n-ph="f.email.ph" placeholder="name@example.com"></div></div><div class="col-md-6"><div class="field"><label for="phone"><span data-i18n="f.phone">Phone number</span> <span class="hint-inline" data-i18n="f.optional" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--dim)">(optional)</span></label><input class="inp" id="phone" name="phone" type="tel" autocomplete="tel" data-i18n-ph="f.phone.ph" placeholder="+000 00 00 00 00"></div></div></div>
+      <div class="field"><label for="topic"><span data-i18n="f.topic">Topic</span> <span class="req" aria-hidden="true">*</span></label><select class="inp" id="topic" name="topic" required><option value="" data-i18n="f.choose">Select…</option><option value="general" data-i18n="topic.general">General question</option><option value="product" data-i18n="topic.product">Product information</option><option value="dealer" data-i18n="topic.dealer">Dealer / business</option><option value="other" data-i18n="topic.other">Other</option></select></div>
+      <div class="field"><label for="message"><span data-i18n="f.message">Message</span> <span class="req" aria-hidden="true">*</span></label><textarea class="inp" id="message" name="message" rows="5" required data-i18n-ph="f.message.ph" minlength="10" placeholder="How can we help?"></textarea></div>
+      <div class="field"><div class="consent"><input type="checkbox" id="consent" name="consent" required><label for="consent" data-i18n="f.consent">I agree that my details may be used to respond to this request.</label></div></div>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center"><button class="px-btn" type="submit"><span data-i18n="f.send">Send inquiry</span><span class="spin" aria-hidden="true"></span></button></div>
+      <p class="demo-note" data-i18n="f.demo.note">Demonstration form: unless a form service is connected, nothing is sent to PAKSTAR SARL.</p>
+    </form>
+  </div></div>
+</div></div></section>
+<section class="section" id="location" aria-labelledby="locTitle"><div class="container-xl"><div class="loc">
+  <div class="loc__copy">
+    <span class="eyebrow reveal" data-i18n="loc.eyebrow">Location</span>
+    <h2 id="locTitle" class="reveal" data-d="80" data-i18n="loc.h2">Find us in Djibouti</h2>
+    <p class="lead-px reveal" data-d="140" data-i18n="loc.p">PAKSTAR SARL serves riders in Djibouti City and the surrounding region. The map shows our market area; the exact showroom address will be added once confirmed.</p>
+    <ul class="c-list reveal" data-d="200">
+      <li class="c-item"><div class="f-card__ico" data-icon="pin"></div><div><h4 data-i18n="loc.city">Djibouti City</h4><p data-i18n="loc.country">Republic of Djibouti, Horn of Africa</p></div></li>
+      <li class="c-item"><div class="f-card__ico" data-icon="globe"></div><div><h4 data-i18n="loc.lang">Languages</h4><p data-i18n="loc.lang.d">French and English</p></div></li>
+      <li class="c-item"><div class="f-card__ico" data-icon="route"></div><div><h4 data-i18n="contact.addr">Address</h4><p><span class="ph" data-i18n="ph.address">[Official Company Address]</span></p></div></li>
+    </ul>
+    <a class="px-btn px-btn--ghost reveal" data-d="260" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=11.588&amp;mlon=43.145#map=13/11.588/43.145"><span data-i18n="loc.open">Open in Maps</span><i data-icon="arrow"></i></a>
+  </div>
+  <div class="loc__map reveal" data-reveal="scale" data-map-src="https://www.openstreetmap.org/export/embed.html?bbox=43.0900%2C11.5400%2C43.2000%2C11.6350&amp;layer=mapnik&amp;marker=11.588%2C43.145">
+    <svg class="loc__art" viewBox="0 -80 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs><linearGradient id="sea" x1="0" x2="1"><stop offset="0" stop-color="#12161b"/><stop offset="1" stop-color="#16303a"/></linearGradient><radialGradient id="pinGlow"><stop offset="0" stop-color="#ff5a28" stop-opacity=".45"/><stop offset="1" stop-color="#ff5a28" stop-opacity="0"/></radialGradient></defs>
+      <rect y="-80" width="600" height="600" fill="#101317"/>
+      <path d="M600 -80H314C320 -40 326 -20 330 0C350 70 392 96 410 150C424 192 452 214 470 250C486 282 470 330 500 372C516 396 560 420 600 440V520H600Z" fill="url(#sea)"/>
+      <path d="M330 0C350 70 392 96 410 150C424 192 452 214 470 250C486 282 470 330 500 372C516 396 560 420 600 440" fill="none" stroke="#2c6575" stroke-width="2" stroke-opacity=".7"/>
+      <g stroke="#ffffff" stroke-opacity=".05"><path d="M0 110H600M0 220H600M0 330H600M0 440H600M120 -80V520M240 -80V520M360 -80V520M480 -80V520"/></g>
+      <g fill="none" stroke="#ff5a28" stroke-opacity=".35" stroke-dasharray="3 7"><circle cx="300" cy="220" r="52"/><circle cx="300" cy="220" r="108"/><circle cx="300" cy="220" r="170"/></g>
+      <circle cx="300" cy="220" r="80" fill="url(#pinGlow)"/>
+      <path d="M300 246s20-18 20-36a20 20 0 10-40 0c0 18 20 36 20 36z" fill="#ff5a28" stroke="#fff" stroke-width="2"/><circle cx="300" cy="210" r="7" fill="#08090b"/>
+      <g font-family="Inter,Arial,sans-serif" letter-spacing="3" fill="#9a9ea7" font-size="11"><text x="436" y="122" fill="#5e8f9e" font-size="10">GULF OF TADJOURA</text><text x="40" y="60">HORN OF AFRICA</text><text x="316" y="266" fill="#ece8e1" font-size="13" font-weight="600" letter-spacing="4">DJIBOUTI CITY</text><text x="316" y="284" font-size="10">11.59°N · 43.15°E</text></g>
+      <g transform="translate(540 380)" stroke="#9a9ea7" fill="none"><circle r="20" stroke-opacity=".4"/><path d="M0-14V14M-6-6L0-14L6-6" stroke-width="1.6"/></g><text x="535" y="418" fill="#9a9ea7" font-size="10" font-family="Inter,Arial,sans-serif">N</text>
+    </svg>
+    <div class="loc__badge"><i data-icon="pin"></i><span data-i18n="loc.badge">Djibouti City</span></div>
+    <div class="loc__actions"><button type="button" class="px-btn px-btn--sm" data-load-map><span data-i18n="loc.load">Load interactive map</span><i data-icon="route"></i></button><small data-i18n="loc.note">The interactive map loads from OpenStreetMap when you press the button.</small></div>
+  </div></div></div></section>
+</main>
+
+<script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/lang-data.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/products.js" defer></script>
+<script src="js/modals.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/pages.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

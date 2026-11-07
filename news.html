@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.news.t">News — PAKSTAR SARL</title>
+<meta name="description" data-i18n-content="meta.news.d" content="News and updates from PAKSTAR SARL.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('pakstar.seen')){document.documentElement.classList.add('no-loader')}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="news">
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__inner"><img class="loader__logo" src="assets/img/logo.png" alt="" width="800" height="467"><div class="loader__sub">SARL · DJIBOUTI</div><div class="loader__bar"><i id="loaderBar"></i></div><div class="loader__pct" id="loaderPct">0</div></div></div>
+
+<main id="main">
+<section class="page-hero page-hero--photo">
+  <div class="page-hero__bg page-hero__bg--photo" style="background-image:url(assets/img/hero-track.jpg)" aria-hidden="true"></div>
+  <div class="container-xl">
+    <ol class="crumbs reveal" aria-label="Breadcrumb"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li aria-current="page"><span data-i18n="nav.news">News</span></li></ol>
+    <span class="eyebrow reveal" data-d="80" data-i18n="news.eyebrow">Updates</span>
+    <h1 class="reveal" data-d="140" data-i18n="news.h1">News</h1>
+    <p class="lead-px reveal" data-d="220" data-i18n="news.lead">Announcements, launches and business updates.</p>
+    
+  </div>
+</section>
+<section class="section"><div class="container-xl">
+  <div class="alert-px alert-px--demo is-show reveal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" style="margin-top:.2rem"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 11v5M12 8v.01"/></svg><div><b data-i18n="news.notice.t">Demonstration articles</b><p data-i18n="news.demo">These articles are demonstration content only — not real PAKSTAR SARL announcements.</p></div></div>
+  <div class="filters" style="justify-content:flex-start"><div class="filters__chips" id="newsFilters" role="group" aria-label="Filter news by topic" data-i18n-aria="news.filter.label"></div></div>
+  <div id="newsFeature"></div>
+  <div class="n-grid" id="newsList"></div>
+</div></section>
+<section class="banner"><div class="banner__bg" data-parallax="0.15"></div><div class="container-xl"><h2 class="reveal" data-i18n="news.cta.t">Questions about a model?</h2><p class="reveal" data-d="80" data-i18n="news.cta.d">Send an inquiry and our team will come back to you.</p><a class="px-btn reveal" data-d="160" href="inquiry.html"><span data-i18n="nav.inquire">Inquire</span><i data-icon="arrow"></i></a></div></section>
+</main>
+
+<script src="assets/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/lang-data.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/products.js" defer></script>
+<script src="js/modals.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/pages.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

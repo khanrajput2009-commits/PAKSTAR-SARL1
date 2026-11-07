@@ -1,0 +1,110 @@
+/* =========================================================
+   PAKSTAR SARL — responsive composition
+   Desktop-first rules above are re-composed (not just shrunk) per breakpoint.
+   ========================================================= */
+@media (min-width:1400px){
+  .container-xl{max-width:1360px}
+  .hero__inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr)}
+}
+@media (min-width:992px){
+  .hero__inner{grid-template-columns:minmax(0,1.1fr) minmax(0,1.2fr)}
+  .hero__stage{margin-right:-4vw}
+  .hero__tag--a{left:8%}
+}
+@media (max-width:1199.98px){
+  .mega__grid{grid-template-columns:repeat(2,1fr)}
+  .mega__all{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);flex-direction:row;align-items:center;justify-content:space-between;padding-top:1rem}
+  .nav-link-px{padding-inline:.6rem;letter-spacing:.1em}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1199.98px){
+  .cat-grid,.f-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:991.98px){
+  .loc{grid-template-columns:1fr}
+  .loc__map{min-height:340px}
+  :root{--hdr:68px}
+  .nav-main,.nav-actions .px-btn,.nav-actions .lang{display:none}
+  .burger{display:inline-block}
+  .brand{font-size:1.4rem}
+  .brand__mark{width:34px;height:34px}
+  .hero{align-items:flex-start;padding-top:calc(var(--hdr) + 1.6rem)}
+  .hero__inner{gap:0}
+  .hero__stage{order:-1;margin:0 -1rem -1rem;max-width:640px}
+  .hero__copy{max-width:none}
+  .hero__tag{display:none}
+  .hero__word{top:6%;right:-14%}
+  .hero__scroll{display:none}
+  .hero__note{position:static;margin-top:1.4rem}
+  .p-grid,.f-grid,.n-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split,.pd,.pm-grid,.n-feature{grid-template-columns:1fr}
+  .split--rev>:first-child{order:0}
+  .pd__stage{position:static}
+  .steps{grid-template-columns:1fr}
+  .g-grid{grid-template-columns:repeat(2,1fr)}
+  .g-item:nth-child(1){grid-column:span 2;grid-row:span 1;aspect-ratio:4/3}
+  .g-item:nth-child(6){grid-column:span 1}
+  .pm-sheet{border-radius:16px}
+}
+@media (max-width:767.98px){
+  .section{padding:3.6rem 0}
+  .p-grid,.f-grid,.n-grid,.cat-grid,.f-grid--4,.mini-grid{grid-template-columns:1fr}
+  .filters{flex-direction:column;flex-wrap:nowrap;align-items:stretch}
+  .filters>*{min-width:0;max-width:100%}
+  .filters__chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-1rem;padding-inline:1rem;-webkit-overflow-scrolling:touch}
+  .filters__chips::-webkit-scrollbar{display:none}
+  .fchip{white-space:nowrap;flex:none}
+  .filters__side{justify-content:space-between}
+  .f-top{grid-template-columns:1fr}
+  .f-bottom{flex-direction:column;align-items:flex-start}
+  .mega__grid{grid-template-columns:1fr}
+  .hero__cta .px-btn{flex:1 1 100%}
+  .px-btn{width:auto}
+  .toast-zone{left:1rem;right:1rem;max-width:none}
+  .lb__btn{width:46px;height:46px}
+  .lb__prev{left:.2rem}.lb__next{right:.2rem}
+  .pm-dialog{padding:0;align-items:flex-end}
+  .pm-sheet{max-height:94svh;border-radius:18px 18px 0 0;border-bottom:0}
+  .pm-media{padding:1rem;padding-top:3.6rem}
+  .acc__btn{font-size:1.2rem}
+  .acc__body{padding-right:0}
+  .p-card__specs{grid-template-columns:1fr 1fr}
+}
+@media (max-width:420px){
+  h1{font-size:clamp(2.7rem,15vw,3.6rem)}
+  .hero h1{font-size:clamp(2.6rem,13vw,3.4rem)}
+  .brand small{display:none}
+  .container-xl{--bs-gutter-x:1.5rem}
+  .selected-model{flex-direction:column;align-items:flex-start}
+}
+/* very large screens: keep line lengths and imagery composed */
+@media (min-width:1920px){
+  html{font-size:112.5%}
+  .container-xl{max-width:1560px}
+}
+/* hover-less devices: use focus/active states instead of hover-only reveals */
+@media (hover:none){
+  .g-item__cap{transform:none}
+  .p-card:hover{transform:none!important}
+  .f-card:hover{transform:none}
+  .px-btn:hover::after{transform:scaleX(0)}
+  .px-btn:hover{color:var(--fg);border-color:var(--bg)}
+  .px-btn--ghost:hover{color:var(--text)}
+  .px-btn:active::after{transform:scaleX(1)}
+  .px-btn:active{color:var(--ink)}
+}
+@media print{
+  .site-header,.loader,.to-top,.m-panel,.site-footer::before{display:none!important}
+  body{background:#fff;color:#000}
+}
+@media (max-width:991.98px){
+  .hero--video{align-items:flex-end;padding-top:calc(var(--hdr) + 1rem)}
+  .hero__video{object-position:62% 40%}
+  .hero__shade{background:linear-gradient(0deg,rgba(8,9,11,.96) 0%,rgba(8,9,11,.7) 45%,rgba(8,9,11,.15) 100%),linear-gradient(180deg,rgba(8,9,11,.5),transparent 22%)}
+  .brand__logo{height:34px}
+  .page-hero__bg--bike{background-size:auto 80%;background-position:right -10% top 25%}
+  .page-hero__bg--bike::after,.page-hero__bg--photo::after{background:linear-gradient(0deg,#08090b 0%,rgba(8,9,11,.78) 55%,rgba(8,9,11,.35) 100%)}
+}
+@media (max-width:767.98px){.js .reveal[data-reveal="right"],.js .reveal[data-reveal="left"]{transform:translateY(30px)}}
+@media (max-width:991.98px){.n-feature--img{grid-template-columns:1fr}.n-card__img--bike{order:-1;min-height:200px}.ride-grid{grid-template-columns:1fr 1fr}.ride:first-child{grid-column:span 2;aspect-ratio:16/9}}
+@media (max-width:575.98px){.ride-grid{grid-template-columns:1fr}.ride:first-child{grid-column:auto}.ride{aspect-ratio:4/3}}
